@@ -25,7 +25,7 @@ include 'Frame/head.php';
             $str .= mb_convert_encoding(chr($value), 'UTF-8', 'ISO-8859-1') . " - ";
         }
         echo '<td>' . $i . '</td>';
-        echo '<td>' . $str . '</td>';
+        echo '<td>' . substr($str, 0, -2) . '</td>';
         echo '</tr>';
     }
     ?>
