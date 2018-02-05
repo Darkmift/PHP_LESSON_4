@@ -1,4 +1,6 @@
 <?php
+
+/*
 $GLOBALS['caller_page'] = 'result';
 $search_array = json_decode(file_get_contents('searchHistory.json'), true);
 $str = "";
@@ -19,12 +21,11 @@ include 'Frame/head.php';
         </tr>
     </thead>
     <?php
-    for ($i = 0; $i < count($search_array); $i++) {
+    foreach ($search_array as $ascii_array) {
         echo '<tr>';
-        foreach ($search_array[$i] as $key => $value) {
+        foreach ($ascii_array as $key => $value) {
             $str .= chr($value);
         }
-        echo '<td>' . $i . '</td>';
         echo '<td>' . $str . '</td>';
         echo '</tr>';
     }
