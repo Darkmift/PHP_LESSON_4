@@ -31,13 +31,18 @@
                 top: 50%;
                 left: 50%;
                 padding: 2%;
+                height: 80%;
+                border:1px solid black;
+                border-radius: 10px;
                 transform: translate(-50%, -50%);
                 text-align: center;
             }
 
-            h1 {
-                background-color: lightblue;
+            h3 {
+                background-color: lightgrey;
                 color: green;
+                border-radius: 15px;
+                padding:5px;
             }
         </style>
     </head>
