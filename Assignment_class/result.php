@@ -22,7 +22,7 @@ include 'Frame/head.php';
     for ($i = 0; $i < count($search_array); $i++) {
         echo '<tr>';
         foreach ($search_array[$i] as $key => $value) {
-            $str .= chr($value);
+            $str .= mb_convert_encoding(chr($value), 'UTF-8', 'ISO-8859-1') . " - ";
         }
         echo '<td>' . $i . '</td>';
         echo '<td>' . $str . '</td>';
